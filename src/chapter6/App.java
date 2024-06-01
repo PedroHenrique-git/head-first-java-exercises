@@ -1,9 +1,14 @@
 package chapter6;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class App {
     public static void main(String[] args) {
+        Logger log = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
+        log.info("This is a log");
+
         ArrayList<Egg> eggs = new ArrayList<>();
 
         var eggOne = new Egg("egg 1");

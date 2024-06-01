@@ -29,8 +29,7 @@ public class App {
             String validationBoatTwo = boatTwo.check(guess);
             String validationBoatThree = boatThree.check(guess);
 
-            if (validationBoatOne.equals("hit") || validationBoatTwo.equals("hit")
-                    || validationBoatThree.equals("hit")) {
+            if (validationBoatOne.equals("hit") || validationBoatTwo.equals("hit") || validationBoatThree.equals("hit")) {
                 System.out.println("hit");
             } else {
                 System.out.println("miss");
