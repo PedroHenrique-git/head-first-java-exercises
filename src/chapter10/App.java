@@ -56,5 +56,13 @@ public class App {
         System.out.println(String.format("%,d", legalButSilly));
         System.out.println(String.format("I have %.2f, bugs to fix.", 476578.09876));
         System.out.println(String.format("I have %,.2f, bugs to fix.", 476578.09876));
+        System.out.println(String.format("%,6.1f", 42.000));
+
+        int one = 20456654;
+        double two = 100567890.2448907;
+
+        String s = String.format("The rank is %,d out of %,.2f", one, two);
+
+        System.out.println(s);
     }
 }
