@@ -1,6 +1,7 @@
 package chapter12;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @FunctionalInterface
@@ -32,6 +33,15 @@ public class App {
                                         .collect(Collectors.toList());
 
         System.out.println(newStrings);
+    }
+
+    public static Optional<String> getColor(String color) {
+        List<String> colors = List.of("Red", "Black", "White", "Blue", "Yellow");
+
+        Optional<String> selectedColor = colors.stream().filter(c -> c.equals(color)).findFirst();
+
+        return selectedColor;
+
     }
 
     public static void forEach(Iter<String> iterator) {
