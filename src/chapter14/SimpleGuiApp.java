@@ -10,6 +10,8 @@ public class SimpleGuiApp {
     private final JButton changeColorButton = new JButton();
     private final JButton changeLabelButton = new JButton();
     private final JPanel panel = new Circle();
+    private int x = 0;
+    private int y = 0;
 
     public void start() {
         configureButtons();
