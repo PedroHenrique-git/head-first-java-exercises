@@ -14,7 +14,14 @@ public class SimpleGuiOne {
         JTextArea text = new JTextArea(10, 20);
         JButton button = new JButton("Just click");
         JScrollPane scroller = new JScrollPane(text);
+        JCheckBox checkBox = new JCheckBox("check");
+        JList<String> list = new JList<>(new String[]{"alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta", "alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta"});
+        JScrollPane scrollerTwo = new JScrollPane(list);
+
         text.setLineWrap(true);
+
+        scrollerTwo.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        scrollerTwo.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -37,6 +44,10 @@ public class SimpleGuiOne {
             //System.out.println("text");
         //});
 
+        checkBox.addActionListener((_event) -> {
+            System.out.println(checkBox.isSelected());
+        });
+
         panel.setBorder(
                 new EmptyBorder(10, 10, 10, 10)
         );
@@ -47,7 +58,9 @@ public class SimpleGuiOne {
         });
 
         panel.add(scroller);
+        panel.add(scrollerTwo);
         panel.add(button);
+        panel.add(checkBox);
 
         //panel.setBackground(Color.darkGray);
         //panel.add(field);
