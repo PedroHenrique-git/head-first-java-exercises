@@ -1,9 +1,11 @@
 package chapter18;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Balance {
-    int balance = 0;
+    AtomicInteger balance = new AtomicInteger();
 
     public synchronized void increment() {
-        balance++;
+        balance.getAndIncrement();
     }
 }

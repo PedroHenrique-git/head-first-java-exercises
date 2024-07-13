@@ -11,7 +11,7 @@ public class LostUpdate {
         Balance balance = new Balance();
 
         for(int i = 0; i < 1000; i++) {
-            pool.execute(() -> balance.increment());
+            pool.execute(balance::increment);
         }
 
         pool.shutdown();
